@@ -11,3 +11,95 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.geral {
+  background-color: rgb(204, 204, 204);
+  letter-spacing: 1px;
+}
+
+.login-div h2 {
+  color: #000000;
+}
+
+.login-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 98vh;
+}
+
+.login-div form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10cm;
+  background-color: rgb(231, 231, 231);
+  border-left: solid 5px rgba(0, 0, 0, 0.274);
+  border-right: solid 5px rgba(0, 0, 0, 0.274);
+  border-radius: 1rem;
+  padding: 1cm;
+  
+}
+
+
+.login-div form input {
+  margin-top: 3px;
+  border: none;
+  width: 5cm;
+  border-bottom: solid 2px;
+  border-image: linear-gradient(100deg, #01eeff 0%, #0000003b 21%, #9d0ac2 46%, #2600ff6c 85%, #00ffd5 100%);
+    border-image-slice: 1;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -ms-appearance: none;
+        transition: 1s;
+}
+
+.login-div label {
+  display:flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+
+
+
+.login-div button {
+  margin-top: 1rem;
+  background-color: hsl(199, 100%, 50%);
+  border-style: none;
+  border-radius: 5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: 1s;
+}
+
+.login-div button:disabled {
+  background-color: rgb(170, 169, 169);
+  border-style: none;
+  border-radius: 5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: 1s;
+}
+
+/* header */
+
+.header-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 4rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
