@@ -10,9 +10,10 @@ class WalletForm extends Component {
       id: -1,
       value: 0,
       description: '',
-      currency: '',
-      method: '',
-      tag: '',
+      currency: 'USD',
+      method: 'Dinheiro',
+      tag: 'Alimentação',
+      exchangeRates: [],
     };
   }
 
@@ -24,17 +25,23 @@ class WalletForm extends Component {
   onHandleSubmit = async (e) => {
     e.preventDefault();
     const { id } = this.state;
+    const response = await fetch('https://economia.awesomeapi.com.br/json/all');
+    const currenciesapi = await response.json();
+    delete currenciesapi.USDT;
     await this.setState({
       id: id + 1,
-    });
-    const { dispatch } = this.props;
-    await dispatch(expenses([this.state]));
-    this.setState({
-      value: 0,
-      description: '',
-      currency: '',
-      method: '',
-      tag: '',
+      exchangeRates: currenciesapi,
+    }, () => {
+      const { dispatch } = this.props;
+      dispatch(expenses([this.state]));
+      this.setState({
+        value: 0,
+        description: '',
+        currency: '',
+        method: '',
+        tag: '',
+        exchangeRates: [],
+      });
     });
   };
 
@@ -47,7 +54,7 @@ class WalletForm extends Component {
 
   render() {
     const { currenci } = this.props;
-    const { method, value, description, currency, tag } = this.state;
+    const { method, value, description, currency, tag, exchangeRates } = this.state;
     return (
       <form onSubmit={ this.onHandleSubmit } className="form-wallet">
         <label htmlFor="value-input">
