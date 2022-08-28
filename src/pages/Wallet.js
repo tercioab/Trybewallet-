@@ -6,16 +6,15 @@ class Wallet extends React.Component {
   render() {
     return (
       <div>
-        TrybeWallet
         <header>
+          <div className="icon">
+            <h1>$</h1>
+          </div>
           <Header />
         </header>
         <main>
           <WalletForm />
         </main>
-        <footer>
-          footer
-        </footer>
       </div>
     );
   }

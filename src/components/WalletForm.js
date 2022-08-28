@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import fetchEconomia from '../redux/actions';
 
 class WalletForm extends Component {
-  teste = () => {
-    console.log(fet('mnmn'));
-  };
+  componentDidMount() {
+    const { dispatch } = this.props;
+    dispatch(fetchEconomia());
+  }
 
   render() {
+    const { currencies } = this.props;
     return (
-      <div>
+      <form className="form-wallet">
         <label htmlFor="value-input">
-          DESPESA
+          Valor:
           <input
             id="value-input"
             placeholder="despesa"
@@ -19,8 +23,35 @@ class WalletForm extends Component {
             data-testid="value-input"
           />
         </label>
+        <label
+          htmlFor="moeda"
+        >
+          Moeda:
+          <select id="moeda" data-testid="currency-input">
+            {currencies.map((currenci, index) => (
+              <option key={ index }>{currenci}</option>))}
+          </select>
+        </label>
+        <label htmlFor="metodo">
+          Método de pagamento:
+          <select id="metodo" data-testid="method-input">
+            <option>Dinheiro</option>
+            <option>Cartão de crédito</option>
+            <option>Cartão de débito</option>
+          </select>
+        </label>
+        <label htmlFor="categoria">
+          Categoria:
+          <select id="categoria" data-testid="tag-input">
+            <option>Alimentação</option>
+            <option>Lazer</option>
+            <option>Trabalho</option>
+            <option>Transporte</option>
+            <option>Saúde</option>
+          </select>
+        </label>
         <label htmlFor="description-input">
-          DESCRIÇÃO
+          Descrição:
           <input
             id="description-input"
             placeholder="descrição"
@@ -29,16 +60,18 @@ class WalletForm extends Component {
             data-testid="description-input"
           />
         </label>
-        <button
-          type="button"
-          onClick={ this.teste }
-        >
-          teste
-
-        </button>
-      </div>
+      </form>
     );
   }
 }
 
-export default connect()(WalletForm);
+const mapStateToProps = (state) => ({
+  currencies: state.wallet.currencies,
+});
+
+WalletForm.propTypes = {
+  dispatch: PropTypes.func,
+  currencies: PropTypes.arrayOf(PropTypes.string),
+}.isRequired;
+
+export default connect(mapStateToProps, null)(WalletForm);

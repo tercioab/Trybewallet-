@@ -69,7 +69,6 @@ class Login extends React.Component {
             type="submit"
           >
             Entrar
-
           </button>
         </form>
       </div>
