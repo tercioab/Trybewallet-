@@ -103,16 +103,25 @@ code {
 /* header */
 
 .icon h1 {
-  color: rgb(0, 0, 0);
-  
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(-30deg, #000000 0%, #3d30303b 21%, #000000 46%, #00293b 85%, #00705e 100%);
   border-radius: 10px;
   height: 1rem;
   padding: 1rem;
+  outline: 2px solid rgb(58, 209, 255);
+  position: relative;
+  overflow: hidden;
+
 }
+
+.trybeWallet {
+  color: white;
+  letter-spacing: 3px;
+}
+
 
 .header-infos {
   margin-right: 6rem;
@@ -124,6 +133,10 @@ code {
 
 .header-infos h4 {
   margin: 1px;
+}
+
+.email {
+  margin-right: 1rem;
 }
 
 header {
@@ -148,4 +161,52 @@ header {
   align-items: center;
   justify-content: space-evenly;
   background-color: rgb(0, 0, 0);
+}
+
+.form-wallet label {
+  font-size: 13px;
+  font-weight:bolder;
+}
+
+.form-wallet input {
+  width: 8rem;
+  border-style: none;
+  height: 20px;
+  
+}
+
+.form-wallet select {
+  height: 20px;
+}
+
+  .form-wallet button {
+  border-style: none;
+  text-transform: uppercase;
+  letter-spacing: 1px ;
+  height: 22px;
+  transition: 1s;
+  background-color:#ffffff;
+}
+
+.form-wallet button:hover{
+  cursor: pointer;
+  background-color: #c1fbff;
+  border-style: none;
+  height: 22px;
+  transition: 1s;
+}
+
+.form-wallet button:active{
+  cursor:grabbing;
+  background-color: #ffffff;
+  border-style: none;
+  height: 22px;
+} 
+
+.brl{
+  text-decoration:underline;
+}
+
+.total {
+  text-decoration: underline;
 }

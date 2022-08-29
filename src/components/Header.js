@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 
 class Header extends Component {
   sum = ({ expenses } = this.props) => {
-    let sumValues = 0;
+    let initialValue = 0;
     expenses.forEach((expense) => {
       const { currency } = expense;
-      const valid = currency || 'USD';
+      const typeCoin = currency || 'USD';
       const expenseValue = expense.value;
-      const askValue = expense.exchangeRates[valid].ask;
-      sumValues += expenseValue * askValue;
+      const askValue = expense.exchangeRates[typeCoin].ask;
+      initialValue += expenseValue * askValue;
     });
-    return sumValues.toFixed(2);
+    return initialValue.toFixed(2);
   };
 
   render() {
@@ -20,11 +20,11 @@ class Header extends Component {
 
     return (
       <div className="header-infos">
-        <h4 data-testid="email-field">
+        <h5 className="email" data-testid="email-field">
           {user.email}
-        </h4>
-        <h4 data-testid="total-field">{this.sum()}</h4>
-        <h4 data-testid="header-currency-field">BRL</h4>
+        </h5>
+        <h5 className="total" data-testid="total-field">{this.sum()}</h5>
+        <h5 className="brl" data-testid="header-currency-field">BRL</h5>
       </div>
     );
   }

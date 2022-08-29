@@ -11,7 +11,7 @@ class Wallet extends React.Component {
             <h1>$</h1>
           </div>
           <div>
-            <h3>
+            <h3 className="trybeWallet">
               TrybeWallet
             </h3>
           </div>
