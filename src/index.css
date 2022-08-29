@@ -169,36 +169,54 @@ header {
 }
 
 .form-wallet input {
+  border-radius: 6px;
+  color: white ;
   width: 8rem;
   border-style: none;
   height: 20px;
-  
+  background-color: black;
+  border:solid 1px white;
+}
+
+.form-wallet input::placeholder {
+  color: rgb(151, 151, 151);
 }
 
 .form-wallet select {
   height: 20px;
+  border-radius: 6px;
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 
+
   .form-wallet button {
+    border-radius: 6px;
+  color: white;
+  outline: 1px solid rgb(255, 255, 255);
   border-style: none;
   text-transform: uppercase;
   letter-spacing: 1px ;
   height: 22px;
   transition: 1s;
-  background-color:#ffffff;
+  background-color:#000000;
 }
 
 .form-wallet button:hover{
+  color: rgb(255, 255, 255);
   cursor: pointer;
-  background-color: #c1fbff;
+  outline: 1px solid rgb(255, 255, 255);
+  background-color: #303030;
   border-style: none;
   height: 22px;
   transition: 1s;
 }
 
 .form-wallet button:active{
+  color: white;
   cursor:grabbing;
-  background-color: #ffffff;
+  outline: 1px solid rgb(255, 255, 255);
+  background-color: #000000;
   border-style: none;
   height: 22px;
 } 
