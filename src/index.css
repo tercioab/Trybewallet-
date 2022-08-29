@@ -180,13 +180,18 @@ header {
 
 .form-wallet input::placeholder {
   color: rgb(151, 151, 151);
+  text-transform: uppercase;
+  text-align: center;
+
 }
 
 .form-wallet select {
   height: 20px;
   border-radius: 6px;
+  border: 1px solid white;
   background-color: rgb(0, 0, 0);
   color: white;
+  text-align: center;
 }
 
 
