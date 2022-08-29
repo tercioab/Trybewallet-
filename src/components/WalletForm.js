@@ -35,11 +35,11 @@ class WalletForm extends Component {
       const { dispatch } = this.props;
       dispatch(expenses(this.state, exchangeRates));
       this.setState({
-        value: '0',
+        value: '',
         description: '',
-        currency: '',
-        method: '',
-        tag: '',
+        currency: 'USD',
+        method: 'Dinheiro',
+        tag: 'Alimentação',
         exchangeRates: [],
       });
     });
