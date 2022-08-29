@@ -7,7 +7,7 @@ class Header extends Component {
     let initialValue = 0;
     expenses.forEach((expense) => {
       const { currency } = expense;
-      const typeCoin = currency || 'USD';
+      const typeCoin = currency;
       const expenseValue = expense.value;
       const askValue = expense.exchangeRates[typeCoin].ask;
       initialValue += expenseValue * askValue;
