@@ -10,6 +10,11 @@ class Wallet extends React.Component {
           <div className="icon">
             <h1>$</h1>
           </div>
+          <div>
+            <h3>
+              TrybeWallet
+            </h3>
+          </div>
           <Header />
         </header>
         <main>
