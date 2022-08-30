@@ -22,33 +22,41 @@ class WalletForm extends Component {
     dispatch(fetchEconomia());
   }
 
-  onHandleSubmit = async (e) => {
-    e.preventDefault();
-    const response = await fetch('https://economia.awesomeapi.com.br/json/all');
-    const currenciesapi = await response.json();
-    delete currenciesapi.USDT;
-    const { id, exchangeRates } = this.state;
-    this.setState({
-      id: id + 1,
-      exchangeRates: currenciesapi,
-    }, () => {
-      const { dispatch } = this.props;
-      dispatch(expenses(this.state, exchangeRates));
-      this.setState({
-        value: '',
-        description: '',
-        currency: 'USD',
-        method: 'Dinheiro',
-        tag: 'Alimentação',
-        exchangeRates: [],
-      });
-    });
-  };
-
   onHandleChange = ({ target }) => {
     const { name, value } = target;
     this.setState({
       [name]: value,
+    });
+  };
+
+  requestApi = async () => {
+    const response = await fetch('https://economia.awesomeapi.com.br/json/all');
+    const currenciesapi = await response.json();
+    delete currenciesapi.USDT;
+    return currenciesapi;
+  };
+
+  clearInput = () => {
+    this.setState({
+      value: '',
+      description: '',
+      currency: 'USD',
+      method: 'Dinheiro',
+      tag: 'Alimentação',
+      exchangeRates: [],
+    });
+  };
+
+  onHandleSubmit = async (e) => {
+    e.preventDefault();
+    const { id, exchangeRates } = this.state;
+    this.setState({
+      id: id + 1,
+      exchangeRates: await this.requestApi(),
+    }, () => {
+      const { dispatch } = this.props;
+      dispatch(expenses(this.state, exchangeRates));
+      this.clearInput();
     });
   };
 

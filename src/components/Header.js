@@ -16,12 +16,12 @@ class Header extends Component {
   };
 
   render() {
-    const { user } = this.props;
+    const { email } = this.props;
 
     return (
       <div className="header-infos">
         <h5 className="email" data-testid="email-field">
-          {user.email}
+          {email}
         </h5>
         <h5 className="total" data-testid="total-field">{this.sum()}</h5>
         <h5 className="brl" data-testid="header-currency-field">BRL</h5>
@@ -32,13 +32,13 @@ class Header extends Component {
 
 function mapStateToProps(state) {
   return {
-    user: state.user,
+    email: state.user.email,
     expenses: state.wallet.expenses,
   };
 }
 
 Header.propTypes = {
-  user: PropTypes.string,
+  email: PropTypes.string,
   wallet: PropTypes.string,
 
 }.isRequired;

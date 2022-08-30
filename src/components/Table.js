@@ -9,7 +9,7 @@ class Table extends Component {
     return expenses.filter(({ id }) => id !== Number(target.id));
   };
 
-  delet = ({ target }) => {
+  dispatchFunc = ({ target }) => {
     const { dispatch } = this.props;
     dispatch(delet(this.filter(target)));
   };
@@ -51,7 +51,7 @@ class Table extends Component {
                     type="button"
                     id={ id }
                     data-testid="delete-btn"
-                    onClick={ this.delet }
+                    onClick={ this.dispatchFunc }
                   >
                     Excluir
                   </button>
