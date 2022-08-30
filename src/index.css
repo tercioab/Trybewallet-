@@ -233,3 +233,15 @@ header {
 .total {
   text-decoration: underline;
 }
+
+/* table */
+
+th {
+  color:  white;
+}
+
+td {
+  color: white;
+  display: flex;
+
+}
