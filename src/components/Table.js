@@ -8,7 +8,7 @@ class Table extends Component {
     return (
       <table>
         <thead>
-          <tr>
+          <tr className="description">
             <th>Descrição</th>
             <th>Tag</th>
             <th>Método de pagamento</th>

@@ -8,6 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Raleway', sans-serif;
+  background-color: black;
 }
 
 
@@ -236,12 +237,24 @@ header {
 
 /* table */
 
-th {
-  color:  white;
+.description {
+  outline: white 2px double;
+  background-color:  #00f7ff3b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-td {
-  color: white;
-  display: flex;
+th {
+  text-transform: uppercase;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 12px;
+  margin-left: 25px;
+}
 
+table {
+  display: flex;
+  flex-direction: column;
+  color: white;
 }
