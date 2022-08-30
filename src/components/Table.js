@@ -6,7 +6,8 @@ import { delet } from '../redux/actions';
 class Table extends Component {
   delet = ({ target }) => {
     const { expenses, dispatch } = this.props;
-    dispatch(delet(expenses.filter((expense) => expense.id !== Number(target.id))));
+    const teste = expenses.filter((expense) => expense.id !== Number(target.id));
+    dispatch(delet(teste));
   };
 
   render() {
@@ -44,7 +45,7 @@ class Table extends Component {
                 <td>
                   <button
                     type="button"
-                    id={ delet.id }
+                    id={ id }
                     data-testid="delete-btn"
                     onClick={ this.delet }
                   >
