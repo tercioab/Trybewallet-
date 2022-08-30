@@ -4,10 +4,14 @@ import PropTypes from 'prop-types';
 import { delet } from '../redux/actions';
 
 class Table extends Component {
+  filter = (target) => {
+    const { expenses } = this.props;
+    return expenses.filter(({ id }) => id !== Number(target.id));
+  };
+
   delet = ({ target }) => {
-    const { expenses, dispatch } = this.props;
-    const teste = expenses.filter((expense) => expense.id !== Number(target.id));
-    dispatch(delet(teste));
+    const { dispatch } = this.props;
+    dispatch(delet(this.filter(target)));
   };
 
   render() {
