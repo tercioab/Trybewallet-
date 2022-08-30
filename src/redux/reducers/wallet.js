@@ -14,6 +14,8 @@ function wallet(state = INITIAL_STATE, action) {
       ...state,
       expenses: [...state.expenses, action.payload],
     };
+  case 'DELETE':
+    return { ...state, currencies: action.payload };
   default:
     return state;
   }

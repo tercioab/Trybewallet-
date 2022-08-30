@@ -23,7 +23,7 @@ class Table extends Component {
         <tbody>
           {expenses
             .map(({ id, value, description, currency, method, tag, exchangeRates }) => (
-              <tr key={ id }>
+              <tr className="result" key={ id }>
                 <td>{description}</td>
                 <td>{tag}</td>
                 <td>{method}</td>
@@ -35,6 +35,12 @@ class Table extends Component {
                 <td>{Number(exchangeRates[currency].ask).toFixed(2) }</td>
                 <td>{(exchangeRates[currency].ask * value).toFixed(2)}</td>
                 <td>Real</td>
+                <button
+                  data-testid="delete-btn"
+                  type="button"
+                >
+                  Excluir
+                </button>
               </tr>))}
         </tbody>
       </table>

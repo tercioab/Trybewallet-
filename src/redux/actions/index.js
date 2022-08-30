@@ -19,6 +19,13 @@ export function expenses(payload) {
   };
 }
 
+export function delet(payload) {
+  return {
+    type: 'DELETE',
+    payload,
+  };
+}
+
 export function fetchEconomia() {
   return async (dispatch) => {
     const response = await fetch('https://economia.awesomeapi.com.br/json/all');

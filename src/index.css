@@ -238,18 +238,20 @@ header {
 /* table */
 
 .description {
-  outline: white 2px double;
-  background-color:  #00f7ff3b;
+  border-top: solid 2px white ;
+  border-bottom: 1px white solid ;
+  background-image: linear-gradient(100deg, #00f7ff3b 0%, #00f7ff3b 21%, #00d9ff6e 46%, #00aeff6c 85%, #00ffd534 100%); ;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
 }
 
 th {
   text-transform: uppercase;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-size: 12px;
+  font-size: 10px;
   margin-left: 25px;
 }
 
@@ -257,4 +259,39 @@ table {
   display: flex;
   flex-direction: column;
   color: white;
+}
+
+.result {
+  
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: bolder;
+  color: white ;
+  background-color: black;
+  text-transform: uppercase;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 3rem;
+  border-top: solid 1px;
+  border-image:linear-gradient(100deg, #00f7ff3b 0%, #00f7ff3b 21%, #00d9ff6e 46%, #00aeff6c 85%, #00ffd534 100%);
+    border-image-slice: 1;
+}
+
+.result button {
+  color: red;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-transform: uppercase;
+  border-style: none;
+  background-color: rgb(0, 0, 0) ;
+  border-radius: 6px;
+  outline: 2px solid red;
+}
+
+td {
+  margin: 1rem;
 }
