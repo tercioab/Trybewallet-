@@ -10,7 +10,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Raleway', sans-serif;
   background-color: black;
-  
+  overflow-x: hidden; 
+ 
 }
 
 
@@ -27,8 +28,28 @@ code {
 
 .login-div h2 {
   color: #ffffff;
-  
+  animation: bounce2 1s alternate;
+  -webkit-animation: bounce2 1s  alternate infinite;
+ 
 }
+
+@keyframes bounce2 {
+  from {
+    transform: translateY(6px);
+  
+    opacity: 50%;
+   
+  
+    
+  }
+  to {
+   transform: translateY(0px);
+
+  }
+}
+
+
+
 
 .login-div {
   display: flex;
@@ -82,15 +103,17 @@ code {
 
 .login-div button {
   margin-top: 1rem;
-  background-color: #00ffd5;
+  background-color: #00ffd556;
   border-style: none;
-  border-radius: 5px;
+  border-radius: 3px;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   transition: 1s;
+  cursor: pointer;
 }
+
 
 .login-div button:disabled {
   background-color: rgb(170, 169, 169);
@@ -101,7 +124,25 @@ code {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   transition: 1s;
+
 }
+
+
+.login-div button:active {
+  margin-top: 1rem;
+  background-color: #00ffd556;
+  border-style: none;
+  border-radius: 3px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: 1s;
+  cursor:grabbing;
+  
+ 
+}
+
 
 /* header */
 
@@ -117,13 +158,56 @@ code {
   outline: 2px solid rgb(58, 209, 255);
   position: relative;
   overflow: hidden;
-
+  transition: 1s;
+  animation: bounce2 1s alternate;
+  -webkit-animation: bounce2 1s  alternate infinite;
+  transition: 1s;
 }
+
+@keyframes bounce2 {
+  from {
+   
+    transform:translateY(10px);  
+
+  }
+  to {
+    
+    
+    
+    
+  }
+}
+
+
+
+.icon h1:hover {
+  animation: hover 1s alternate;
+  -webkit-animation: hover 1s  alternate infinite;
+  transition: 1s;
+}
+
+
+@keyframes hover {
+  from {
+   
+    transform: rotatey(360deg);  
+    filter: blur(10px);
+    transition: 1s;
+  }
+  to {
+    
+    
+    transform: rotatey(0deg);
+    
+  }
+}
+
 
 .trybeWallet {
   color: white;
   letter-spacing: 3px;
 }
+
 
 
 .header-infos {
@@ -164,6 +248,10 @@ header {
   align-items: center;
   justify-content: space-evenly;
   background-color: rgb(0, 0, 0);
+  border-bottom: solid 2px;
+  border-image: linear-gradient(100deg, #01eeff 0%, #00f7ff3b 21%, #00d9ff 46%, #00aeff6c 85%, #00ffd5 100%);
+    border-image-slice: 1;
+    margin-bottom: 5px;
 }
 
 .form-wallet label {
@@ -235,26 +323,18 @@ header {
 
 .total {
   text-decoration: underline;
+  animation: transition 1s alternate;
 }
 
 /* table */
-
-.description {
-  border-top: solid 1px white ;
-  background-image: linear-gradient(100deg, #00f7ff3b 0%, #00f7ff3b 21%, #00d9ff6e 46%, #00aeff6c 85%, #00ffd534 100%); ;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
 th {
   text-transform: uppercase;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 10px;
-  margin-right: auto;
-  margin-left: auto;
+
 }
+
 
 table {
   display: flex;
@@ -263,23 +343,44 @@ table {
 }
 
 .result {
-  font-weight: 600;
-  margin-top: 4px;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-weight: bolder;
-  color: rgb(255, 255, 255) ;
-  background-color: #00d9ff6e;
-  text-transform: uppercase;
-  font-size: 10px;
+text-transform: uppercase;
+background-image: linear-gradient(100deg, #00f7ff3b 0%, #00f7ff3b 21%, #00d9ff6e 46%, #00aeff6c 85%, #00ffd534 100%); ;
+  
   display: flex;
-  gap: 3rem;
-  border-top: solid 1px;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+   font-size: 10px;
   border-radius: 10px;
- 
-
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right:10px;
+  align-items:flex-start;
+  justify-content: center;
+  gap: 3rem;
+  text-align: center;
+  animation: bounce 1s alternate;
+  -webkit-animation: bounce 1s  alternate;
+  transition: 1s;
 }
+
+@keyframes bounce {
+  from {
+    transform: translateY(50px);
+    opacity: 0%;
+    color: #000000;
+   
+  
+    
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+
+
+
 
 .result button {
   color: rgb(255, 255, 255);
@@ -295,6 +396,25 @@ table {
 }
 
 td {
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.t1 {
+  margin-left: 2rem;
+}
+
+.t9 {
+  margin-right: 2rem;
+}
+
+table button:hover {
+  cursor: pointer;
+  
+}
+
+table button:active {
+  cursor:grabbing;
 }
