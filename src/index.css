@@ -64,13 +64,13 @@ code {
   flex-direction: column;
   align-items: center;
   width: 13cm;
+  border-bottom: solid 1px;
+  border-top: solid 1px;
   background-color: rgb(0, 0, 0);
   border-image: linear-gradient(100deg, #01eeff 0%, #00f7ff3b 21%, #00d9ff 46%, #00aeff6c 85%, #00ffd5 100%);
     border-image-slice: 1;
   border-left: solid 1px;
   border-right: solid 1px;
-  border-bottom: solid 1px;
-  border-top: solid 1px;
   padding: 1cm;
   
 }
@@ -228,14 +228,12 @@ code {
 
 header {
   color: white;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-items: center;
   justify-content: space-around;
-  border-bottom: solid 3px;
-  border-image: linear-gradient(100deg, #01eeff 0%, #00f7ff3b 21%, #00d9ff 46%, #00aeff6c 85%, #00ffd5 100%);
-    border-image-slice: 1;
+ 
 }
 
 /*wallet form */
@@ -247,8 +245,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(134, 134, 134);
   border-bottom: solid 2px;
+  border-top: solid 2px;
   border-image: linear-gradient(100deg, #01eeff 0%, #00f7ff3b 21%, #00d9ff 46%, #00aeff6c 85%, #00ffd5 100%);
     border-image-slice: 1;
     margin-bottom: 5px;
