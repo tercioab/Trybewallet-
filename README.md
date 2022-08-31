@@ -36,4 +36,6 @@ Neste projeto, as habilidades utilizadas foram:
 - Consumir uma api
 
 - Criar _actions_ assíncronas na sua aplicação React que faz uso de Redux.
+
 </details>
+
