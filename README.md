@@ -39,5 +39,5 @@ Neste projeto, as habilidades utilizadas foram:
 
 </details>
 
-![alt text](/imagensReadme/Captura%20de%20tela%20de%202022-08-31%2017-40-25.png)
-![alt text](/imagensReadme/Captura%20de%20tela%20de%202022-08-31%2017-41-42.png)
+![alt text](/imagensReadme/Captura%20de%20tela%20de%202022-09-12%2002-00-47.png)
+![alt text](/imagensReadme/Captura%20de%20tela%20de%202022-09-12%2002-02-19.png)
