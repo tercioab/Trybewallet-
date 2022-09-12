@@ -14,15 +14,39 @@ body {
 
 :root {
 --radial-background: linear-gradient(190deg, rgb(0, 0, 0) , rgba(0, 0, 0, 0.925));
---gradient-master: linear-gradient(-60deg, rgba(255, 255, 255, 0.021) , rgba(58, 58, 58, 0.2) , rgba(255, 255, 255, 0.2) );
 
---low-gradient:  linear-gradient(-60deg, rgba(133, 133, 133, 0.082) , rgba(180, 180, 180, 0.103) , rgba(255, 255, 255, 0.322) );
+
+--gradient-master: linear-gradient(-60deg, rgba(30, 30, 30 ), rgba(25, 25, 25 ) );
+
+
 
 --font-color:  #fafafa;
---radius: 5px;
+--radius: 10px;
 --border: solid 1px rgba(0, 0, 0, 0.164);
 --border-input: solid 1px var(--font-color);
 }
+
+input {
+  margin-top: 5px;
+  color: var(--font-color);
+  transition: 1s;
+}
+
+select {
+  color: rgb(131, 131, 131) !important;
+}
+
+input:focus-within{
+  outline: none !important;
+  border-color: rgb(166, 255, 0) !important;
+  transition: 1s;
+}
+
+select:focus-within {
+  outline: none !important;
+}
+
+
 
 /* header inicio */
 
@@ -36,8 +60,8 @@ body {
 
 .header-infos {
 	width: 90%;
-  background-image: var(--low-gradient);
-  border: var(--border);
+  background-image: var(--gradient-master);
+  border: solid 1px rgb(36, 36, 36);
   border-radius: var(--radius);
   margin-bottom: 1rem;
 }
@@ -102,12 +126,16 @@ main {
 }
 
 .form-wallet input {
+ 
   margin-bottom: 1rem;
 	width: 14rem;
   background-color: rgba(255, 255, 255, 0);
   border: none;
   border-bottom: var(--border-input);
 }
+
+
+
 
 .form-wallet button {
   font-weight: bold;
@@ -233,3 +261,67 @@ main {
 }
 
 /* tela login final */
+
+@media (min-width: 1200px)
+{
+  .result {
+    width: 90%;
+    flex-direction: row;
+    align-items: initial;
+    justify-content: center;
+  
+  }
+
+  .resultt {
+   border-right: 1px solid black;
+    align-items: center;
+    flex-direction: column;
+    justify-content:flex-start;
+    padding-left: 1rem;
+    text-align: center;
+    padding-right: 1rem;
+    gap: 0px;
+  }
+
+
+  .result button {
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    color: var(--font-color);
+    padding-top: 5px;
+    margin-top: 2rem;
+  
+  margin-right: 1rem; 
+    margin-left: 1rem;
+  }
+
+  .form-wallet {
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-end;
+    gap: 1rem;
+  }
+
+  .form-wallet input {
+    width: 10rem;
+  }
+
+  .form-wallet select {
+    width: 10rem;
+  }
+
+  .form-wallet button {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-wallet label {
+
+    margin-left: 1rem;
+  
+  }
+  
+ 
+}
