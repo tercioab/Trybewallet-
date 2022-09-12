@@ -43,7 +43,7 @@ class Login extends React.Component {
     return (
       <div className="login-div">
         <form className='login-form' onSubmit={ this.handleSubmit }>
-          <h2>TrybeWallet</h2>
+          <h2>MyWallet</h2>
           <label htmlFor="email-input">
             email
             <input

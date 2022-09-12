@@ -8,7 +8,7 @@ class Wallet extends React.Component {
 		return (
 			<body className='geral-wallet'>
 				<header className='trybewallet-div'>
-					<h3 className='trybeWallet'>TrybeWallet</h3>
+					<h3 className='trybeWallet'>MyWallet</h3>
 					<Header />
 				</header>
 				<main>
