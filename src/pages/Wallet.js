@@ -1,30 +1,23 @@
-import React from 'react';
-import Header from '../components/Header';
-import Table from '../components/Table';
-import WalletForm from '../components/WalletForm';
+import React from "react";
+import Header from "../components/Header";
+import Table from "../components/Table";
+import WalletForm from "../components/WalletForm";
 
 class Wallet extends React.Component {
-  render() {
-    return (
-      <div>
-        <header>
-          <div className="icon">
-            <h1>$</h1>
-          </div>
-          <div>
-            <h3 className="trybeWallet">
-              TrybeWallet
-            </h3>
-          </div>
-          <Header />
-        </header>
-        <main>
-          <WalletForm />
-          <Table />
-        </main>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<body className='geral-wallet'>
+				<header className='trybewallet-div'>
+					<h3 className='trybeWallet'>TrybeWallet</h3>
+					<Header />
+				</header>
+				<main>
+					<WalletForm />
+					<Table />
+				</main>
+			</body>
+		);
+	}
 }
 
 export default Wallet;

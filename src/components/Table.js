@@ -17,47 +17,46 @@ class Table extends Component {
   render() {
     const { expenses } = this.props;
     return (
-      <table>
-        <tbody>
+      <>
           {expenses
             .map(({ id, value, description, currency, method, tag, exchangeRates }) => (
-              <tr className="result" key={ id }>
-                <td className="t1">
+              <div className="result" key={ id }>
+                <div className="resultt">
                   <h3>Descrição</h3>
                   {description}
-                </td>
-                <td className="t2">
+                </div>
+                <div className="resultt">
                   <h3>Tag</h3>
                   {tag}
-                </td>
-                <td className="t3">
+                </div>
+                <div className="resultt">
                   <h3>Método de pagamento</h3>
                   {method}
-                </td>
-                <td className="t4">
+                </div>
+                <div className="resultt">
                   <h3>Valor</h3>
                   {' '}
                   {Number(value).toFixed(2)}
-                </td>
-                <td className="t5">
+                </div>
+                <div className="resultt">
                   <h3>Moeda</h3>
                   {(exchangeRates[currency].name).split('/', 1)}
-                </td>
-                <td className="t6">
+                </div>
+                <div className="resultt">
                   <h3>Câmbio utilizado</h3>
                   {Number(exchangeRates[currency].ask).toFixed(2) }
-                </td>
-                <td className="t7">
+                </div>
+                <div className="resultt">
                   <h3>Valor convertido</h3>
                   {(exchangeRates[currency].ask * value).toFixed(2)}
-                </td>
-                <td className="t8">
+                </div>
+                <div className="resultt">
                   <h3>Moeda de conversão</h3>
                   Real
-                </td>
-                <td>
+                </div>
+                <div>
                   <button
-                    className="t9"
+                    className="resultt"
                     type="button"
                     id={ id }
                     data-testid="delete-btn"
@@ -65,10 +64,9 @@ class Table extends Component {
                   >
                     Excluir
                   </button>
-                </td>
-              </tr>))}
-        </tbody>
-      </table>
+                </div>
+              </div>))}
+      </>
 
     );
   }
@@ -81,7 +79,7 @@ function mapStateToProps(state) {
 }
 
 Table.propTypes = {
-  expenses: PropTypes.string,
+  expenses: PropTypes.sdiving,
   dispatch: PropTypes.func,
 }.isRequired;
 
