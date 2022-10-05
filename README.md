@@ -46,7 +46,7 @@ Neste projeto, as habilidades utilizadas foram:
 Clone o repositório em uma pasta de preferência
 
 ```
-git clone git@github.com:tercioab/StarWars-search-planets.git
+git clone git@github.com:tercioab/Trybewallet-.git
 ```
 
 Entre na pasta que você acabou de clonar, e instale as dependencias
