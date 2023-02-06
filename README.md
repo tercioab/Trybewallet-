@@ -39,7 +39,6 @@ Neste projeto, as habilidades utilizadas foram:
 
 </details>
 
-
 <details>
 
 <summary><strong> ⚙️ Como Executar </strong></summary><br />
@@ -59,6 +58,9 @@ npm start
 </details>
 
 [DEPLOY](https://mywhallet-tan.vercel.app/)
+
+ATENÇÃO
+Para fazer o login basta inserir um email com formato valido e uma senha de 6 caracteres 
 
 ![alt text](/imagensReadme/Captura%20de%20tela%20de%202022-09-12%2002-00-47.png)
 ![alt text](/imagensReadme/Captura%20de%20tela%20de%202022-09-12%2002-02-19.png)
